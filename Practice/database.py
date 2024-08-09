@@ -3,18 +3,17 @@ import sqlite3
 conn = sqlite3.connect('database.db')
 cursor = conn.cursor()
 
-# Drop the table if it exists (to ensure we're starting fresh)
+# Drop the table if it exists
 cursor.execute('DROP TABLE IF EXISTS classes')
 
-# Create a table to store class dates
+# Creating a table
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS classes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     date TEXT NOT NULL
 )
 ''')
-
-# Insert sample class dates (including both past and future dates)
+#inserting data
 cursor.execute('''
 INSERT INTO classes (date) VALUES
 ('2023-05-01'),
