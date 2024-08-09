@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Next Event</title>
+</head>
+<body>
+    <h1>Next Event</h1>
+    {% if next_event %}
+        <p>The next event is <em>"{{ next_event[0] }}"</em> on <em>"{{ next_event[1] }}"</em>.</p>
+    {% else %}
+        <p>No upcoming events found.</p>
+    {% endif %}
+</body>
+</html>
